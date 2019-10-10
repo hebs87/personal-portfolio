@@ -47,40 +47,18 @@
 				<div class="navbar-nav ml-auto">
 					<a class="nav-item nav-link" href="#">Facebook</a>
 					<a class="nav-item nav-link" href="#">Resume</a>
-					<a class="nav-item nav-link" href="#">Blog</a>
+					<a class="nav-item nav-link active" href="#">Blog</a>
 				</div>
 			</div>
 		</nav>
 	</header>
 
-	<main role="main">
+	<main role="main" class="container">
 
-		<section class="jumbotron text-center">
-			<div class="container">
-				<h1 class="jumbotron-heading">Hi, I'm Sunny!</h1>
-				<p class="lead text-muted">Hey, my name is Sunny, and I love to make Full Stack websites using HTML, CSS, JavaScript, Python, Flask and Django. If you need a website, I'm your man!</p>
-				<p>
-					<a href="mailto:sunnyhebbar@hotmail.co.uk" class="btn btn-primary my-2">Email Me</a>
-				</p>
-			</div>
-		</section>
+        <h1 class="text-center">Welcome to Sunny's Blog</h1>
 
-		<div class="album py-5 bg-light">
-			<div class="container">
-				<div class="row">
-                    {% for job in jobs %}
-                        <div class="col-md-4">
-                            <div class="card mb-4 shadow-sm">
-                                <img class="card-img-top" src="{{ job.image.url }}" alt="{{ job.summary }}">
-                                <div class="card-body">
-                                    <p class="card-text">{{ job.summary }}</p>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-				</div>
-			</div>
-		</div>
+        <h2>Latest Posts</h2>
+        <hr/>
 
 	</main>
 
