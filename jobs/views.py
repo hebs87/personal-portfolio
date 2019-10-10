@@ -1,5 +1,16 @@
 from django.shortcuts import render
+from .models import Job
 
 # Create your views here.
 def home(request):
-    return render(request, "home.html")
+    '''
+    Render the home page and inject Job model data
+    into the HTML template
+    '''
+    jobs = Job.objects
+
+    context = {
+        "jobs": jobs,
+    }
+
+    return render(request, "home.html", context)
