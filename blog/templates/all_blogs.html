@@ -59,6 +59,18 @@
 
         <h2>Latest Posts</h2>
         <hr/>
+        <!-- Details for each blog post -->
+        {% for blog in blogs %}
+            <a href="">
+                <h3>{{ blog.title }}</h3>
+                {{ blog.pub_date|date:"j M Y" }}
+                <br/>
+                <img class="img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                <br/>
+                <p>{{ blog.body }}</p>
+            </a>
+
+        {% endfor %}
 
 	</main>
 
