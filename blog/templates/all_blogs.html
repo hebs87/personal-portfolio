@@ -47,7 +47,7 @@
 				<div class="navbar-nav ml-auto">
 					<a class="nav-item nav-link" href="https://www.facebook.com/hebs87" target="_blank">Facebook</a>
 					<a class="nav-item nav-link" href="{% static 'files/sunny-hebbar-cv.pdf' %}" target="_blank">Resume</a>
-					<a class="nav-item nav-link" href="{% url 'all_blogs' %}">Blog</a>
+					<a class="nav-item nav-link active" href="{% url 'all_blogs' %}">Blog</a>
 				</div>
 			</div>
 		</nav>
@@ -61,7 +61,7 @@
         <hr/>
         <!-- Details for each blog post -->
         {% for blog in blogs %}
-            <a href="">
+            <a href="{% url 'blog_detail' blog.id %}">
                 <h3>{{ blog.title }}</h3>
                 <!--Injected pub_date_beautify function from Blog model-->
                 {{ blog.pub_date_beautify }}
