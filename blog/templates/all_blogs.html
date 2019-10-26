@@ -39,15 +39,15 @@
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">Sunny Hebbar</a>
+			<a class="navbar-brand" href="{% url 'home' %}">Sunny Hebbar</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav ml-auto">
-					<a class="nav-item nav-link" href="#">Facebook</a>
-					<a class="nav-item nav-link" href="#">Resume</a>
-					<a class="nav-item nav-link active" href="#">Blog</a>
+					<a class="nav-item nav-link" href="https://www.facebook.com/hebs87" target="_blank">Facebook</a>
+					<a class="nav-item nav-link" href="{% static 'files/sunny-hebbar-cv.pdf' %}" target="_blank">Resume</a>
+					<a class="nav-item nav-link" href="{% url 'all_blogs' %}">Blog</a>
 				</div>
 			</div>
 		</nav>
