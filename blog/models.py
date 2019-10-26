@@ -21,5 +21,12 @@ class Blog(models.Model):
         blank=True,
         null=True)
 
+    def pub_date_beautify(self):
+        '''
+        Beautifies the pub_date and makes it a more
+        presentable format using strftime
+        '''
+        return self.pub_date.strftime('%e %b %Y')
+
     def __str__(self):
         return self.title
