@@ -18,11 +18,11 @@
 
 	<div class="album py-5 bg-light">
 		<div class="container">
-	    	<div class="row">
+	    	<div class="row text-center">
                 {% for job in jobs %}
-                    <div class="col-md-4">
+                    <div class="col-sm-6 col-md-4">
                         <div class="card mb-4 shadow-sm">
-                            <img class="card-img-top" src="{{ job.image.url }}" alt="{{ job.summary }}">
+                            <img class="card-img-top img-fluid job-img text-center" src="{{ job.image.url }}" alt="{{ job.summary }}">
                             <div class="card-body">
                                 <p class="card-text">{{ job.summary }}</p>
                             </div>
