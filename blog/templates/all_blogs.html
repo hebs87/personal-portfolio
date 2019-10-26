@@ -63,7 +63,8 @@
         {% for blog in blogs %}
             <a href="">
                 <h3>{{ blog.title }}</h3>
-                {{ blog.pub_date|date:"j M Y" }}
+                <!--Injected pub_date_beautify function from Blog model-->
+                {{ blog.pub_date_beautify }}
                 <br/>
                 <img class="img-fluid" src="{{ blog.image.url }}" alt="{{ blog.title }}">
                 <br/>
