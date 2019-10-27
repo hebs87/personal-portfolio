@@ -5,4 +5,15 @@
 
 {% block content %}
 
+    <div class="row text-center">
+        <div class="col-12">
+            <h1>{{ blog_detail.title }}</h1>
+            <p>{{ blog_detail.pub_date }}</p>
+            <img class="img-fluid" src="{{ blog_detail.image.url }}" alt="{{ blog_detail.title }}">
+            <br>
+            <br>
+            <p>{{ blog_detail.body }}</p>
+        </div>
+    </div>
+
 {% endblock %}
